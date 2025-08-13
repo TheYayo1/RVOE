@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Panel Principal";
+}
+
+<h2>Bienvenido, @ViewBag.Nombre 👋</h2>
+
+<p>Selecciona una opción del menú para comenzar:</p>
+
+<ul>
+    <li><a asp-controller="Escuelas" asp-action="Index">📚 Gestión de Escuelas</a></li>
+    <li><a asp-controller="Planes" asp-action="Index">📄 Planes y Programas</a></li>
+    <li><a asp-controller="Requisitos" asp-action="Index">✅ Requisitos</a></li>
+    <li><a asp-controller="Historiales" asp-action="Index">📜 Historiales</a></li>
+    <li><a asp-controller="EnvioRecepcion" asp-action="Index">📤 Envío / Recepción</a></li>
+    <li><a asp-controller="Auth" asp-action="Logout">🚪 Cerrar Sesión</a></li>
+</ul>

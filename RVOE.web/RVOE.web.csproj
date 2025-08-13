@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RVOE.contextos\RVOE.contextos.csproj" />
+    <ProjectReference Include="..\RVOE.sistemas\RVOE.sistemas.csproj" />
+  </ItemGroup>
+
+</Project>
