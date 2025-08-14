@@ -1,0 +1,45 @@
+﻿@model IEnumerable<RVOE.ValidadorModelos.modelos.Escuelas>
+@{
+    ViewData["Title"] = "Listado de Escuelas";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Listado de Escuelas</h2>
+
+    <form method="get" class="row mb-3">
+        <div class="col-md-8">
+            <input type="text" name="search" class="form-control" placeholder="Buscar por nombre o CCT" />
+        </div>
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-primary w-100">Buscar</button>
+        </div>
+    </form>
+
+    <div class="mb-3">
+        <a href="@Url.Action("Create")" class="btn btn-success">Agregar Nueva Escuela</a>
+    </div>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Nombres escuelas</th>
+                <th>CCT</th>
+                <th>Municipio</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.NombreEscuela</td>
+                    <td>@item.CCT</td>
+                    <td>@item.Municipio</td>
+                    <td>
+                        <a href="@Url.Action("Details", new { id = item.EscuelaId })" class="btn btn-info btn-sm">Seleccionar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

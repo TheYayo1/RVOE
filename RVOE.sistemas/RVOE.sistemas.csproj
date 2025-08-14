@@ -10,4 +10,8 @@
     <ProjectReference Include="..\RVOE.modelos\RVOE.modelos.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ValidadorSistemas\" />
+  </ItemGroup>
+
 </Project>

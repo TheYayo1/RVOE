@@ -4,9 +4,8 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace RVOE.entidades;
+namespace RVOE.ValidadorEntidades.modelValidador;
 
-[Microsoft.EntityFrameworkCore.Index("Correo", Name = "UQ__Usuarios__60695A19F02DD7B0", IsUnique = true)]
 public partial class Usuarios
 {
     [Key]
@@ -15,21 +14,24 @@ public partial class Usuarios
     [StringLength(50)]
     public string Nombre { get; set; } = null!;
 
-    [StringLength(50)]
-    public string? ApellidoPaterno { get; set; }
+    [StringLength(30)]
+    public string ApellidoPaterno { get; set; } = null!;
 
-    [StringLength(50)]
-    public string? ApellidoMaterno { get; set; }
+    [StringLength(30)]
+    public string ApellidoMaterno { get; set; } = null!;
 
     [StringLength(100)]
-    public string Correo { get; set; } = null!;
+    public string? Correo { get; set; }
 
-    [StringLength(200)]
-    public string ContrasenaHash { get; set; } = null!;
+    [StringLength(255)]
+    public string Contraseña { get; set; } = null!;
 
     public Guid RolId { get; set; }
 
     public bool Activo { get; set; }
+
+    [Column(TypeName = "datetime")]
+    public DateTime? FechaCreacion { get; set; }
 
     [ForeignKey("RolId")]
     [InverseProperty("Usuarios")]
