@@ -2,18 +2,23 @@
     ViewData["Title"] = "Login";
 }
 
-<h2>Iniciar Sesión</h2>
+<h2 class="text-center mt-5">Iniciar Sesión</h2>
 
 <form method="post" asp-action="Login">
-    <div>
-        <label>Correo:</label>
-        <input type="email" name="correo" required />
+    <div class="d-flex justify-content-center mt-5">
+        <div class="card text-center p-5 text-white rounded-4" style="width: 600px; background-color: #5B102D">
+            <div>
+                <p class="text-start">Correo:</p>
+                <input class="form-control" type="email" name="correo" required placeholder="usuario@correo.com" />
+            </div>
+            <div class="mt-3">
+                <p class="text-start">Contraseña:</p>
+                <input class="form-control" type="password" name="contrasena" placeholder="*******" required />
+            </div>
+            <button type="submit" class="btn btn-login mt-4">Ingresar</button>
+        </div>
     </div>
-    <div>
-        <label>Contraseña:</label>
-        <input type="password" name="contrasena" required />
-    </div>
-    <button type="submit">Ingresar</button>
+
 </form>
 
 @if (ViewBag.Error != null)
