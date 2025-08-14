@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<PladseLocalContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("PladseLocalContext")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PladseLocal")));
 
 builder.Services.AddSession();
 
