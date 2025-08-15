@@ -40,7 +40,7 @@ body {
     background-color: #917832;
 }
 
-Diseño de pantalla principal
+/*Diseño de pantalla principal*/
 
 body {
     padding-top: 0;
@@ -54,7 +54,7 @@ body {
     top: 0;
     left: 0;
     height: 100vh;
-    background: linear-gradient(180deg, #8B5A8C 0%, #611332 100%);
+    background: #5B102D;
     color: white;
     overflow-y: auto;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
@@ -89,7 +89,7 @@ body {
     }
 
     .nav-link.active {
-        background: linear-gradient(135deg, #FF6B6B, #4ECDC4);
+        background: #B09A5B;
         color: white !important;
         box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
         transform: translateX(5px);
@@ -138,14 +138,14 @@ body {
 }
 
 .card-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #5B102D;
     color: white;
     border: none;
     padding: 1.5rem;
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #5B102D;
     border: none;
     border-radius: 10px;
     padding: 0.75rem 1.5rem;
@@ -155,11 +155,11 @@ body {
 
     .btn-primary:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        box-shadow: 0 6px 20px#B09A5B;
     }
 
 .btn-success {
-    background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+    background: #5B102D;
     border: none;
     border-radius: 10px;
     padding: 0.75rem 1.5rem;
@@ -169,11 +169,12 @@ body {
 
     .btn-success:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+        background: #B09A5B;
+        box-shadow: 0 6px 20px#B09A5B;
     }
 
 .btn-info {
-    background: linear-gradient(135deg, #36D1DC 0%, #5B86E5 100%);
+    background: #5B102D;
     border: none;
     border-radius: 8px;
     font-weight: 500;
@@ -187,7 +188,7 @@ body {
 }
 
     .table thead th {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: #5B102D;
         color: white;
         border: none;
         padding: 1rem;

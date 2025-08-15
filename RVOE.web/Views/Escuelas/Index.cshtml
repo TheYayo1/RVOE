@@ -73,14 +73,13 @@
             </div>
         </div>
 
-        <!-- Sección Escuelas (tu código actual mejorado) -->
         <div id="escuelas" class="section-content active">
             <div class="card">
                 <div class="card-header">
                     <h2 class="mb-0"><i class="bi bi-building me-2"></i>Listado de Escuelas</h2>
                 </div>
                 <div class="card-body">
-                    <!-- Formulario de búsqueda -->
+
                     <form method="get" class="search-form">
                         <div class="row">
                             <div class="col-md-8">
@@ -94,7 +93,7 @@
                             </div>
                             <div class="col-md-4">
                                 <button type="submit" class="btn btn-primary w-100">
-                                    <i class="bi bi-search me-1"></i>Buscar
+                                    <i class="bi bi-search me-1" ></i>Buscar 
                                 </button>
                             </div>
                         </div>
@@ -102,8 +101,8 @@
 
                     <!-- Botón agregar -->
                     <div class="mb-3">
-                        <a href="@Url.Action("Agregar")" class="btn btn-success">
-                            <i class="bi bi-plus-circle me-1"></i>Agregar Nueva Escuela
+                        <a href="@Url.Action("Agregar")" class="btn btn-success " style=" background-color: #5B102D; border-spacing:initial">
+                            <i class="bi bi-plus-circle "></i>Agregar Nueva Escuela
                         </a>
                     </div>
 
@@ -180,16 +179,14 @@
         </div>
     </div>
 
-    <!-- Script para cambiar de sección -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function showSection(id) {
-            // Oculta todas las secciones
+  
             document.querySelectorAll(".section-content").forEach((section) => {
                 section.classList.remove("active");
             });
 
-            // Activa la sección seleccionada
             document.getElementById(id).classList.add("active");
 
             // Actualiza clases del menú
@@ -197,14 +194,13 @@
                 link.classList.remove("active");
             });
 
-            // Añade la clase active al enlace clickeado
+            
             event.target.closest('.nav-link').classList.add("active");
 
-            // Guarda la sección actual en localStorage (opcional)
+           
             localStorage.setItem('currentSection', id);
         }
 
-        // Restaurar la sección activa al cargar la página (opcional)
         document.addEventListener('DOMContentLoaded', function() {
             const savedSection = localStorage.getItem('currentSection');
             if (savedSection && document.getElementById(savedSection)) {
