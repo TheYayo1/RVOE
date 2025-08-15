@@ -1,8 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RVOE.ValidadorEntidades.modelValidador;
-using System;
-using System.Collections.Generic;
-using temp.modelValidador;
+using RVOE.entidades.ValidadorEntidades;
 
 namespace RVOE.contextos;
 
@@ -54,6 +51,10 @@ public partial class ValidadorUniversidadesContext : DbContext
             entity.HasOne(d => d.Estatus).WithMany(p => p.Escuelas)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Escuelas_EstatusEscuela");
+
+            entity.HasOne(d => d.TipoEscuela).WithMany(p => p.Escuelas)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Escuelas_TiposEscuela");
         });
 
         modelBuilder.Entity<EstatusEscuela>(entity =>
@@ -96,11 +97,8 @@ public partial class ValidadorUniversidadesContext : DbContext
 
         modelBuilder.Entity<TiposEscuela>(entity =>
         {
+            entity.Property(e => e.TipoEscuelaId).ValueGeneratedNever();
             entity.Property(e => e.NombreTipo).HasComment("Si es pública, privada, etc");
-
-            entity.HasOne(d => d.TipoEscuela).WithMany()
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_TiposEscuela_Escuelas");
         });
 
         modelBuilder.Entity<Usuarios>(entity =>

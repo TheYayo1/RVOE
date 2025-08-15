@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
-namespace RVOE.ValidadorEntidades.modelValidador;
+namespace RVOE.entidades.ValidadorEntidades;
 
 public partial class Requisitos
 {

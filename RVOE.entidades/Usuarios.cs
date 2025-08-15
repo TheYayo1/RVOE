@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace RVOE.entidades;
 
-[Microsoft.EntityFrameworkCore.Index("Correo", Name = "UQ__Usuarios__60695A19F02DD7B0", IsUnique = true)]
+//[Microsoft.EntityFrameworkCore.Index("Correo", Name = "UQ__Usuarios__60695A19F02DD7B0", IsUnique = true)]
 public partial class Usuarios
 {
     [Key]

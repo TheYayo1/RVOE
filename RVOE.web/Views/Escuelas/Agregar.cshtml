@@ -1,4 +1,4 @@
-﻿@model RVOE.ValidadorModelos.modelos.Escuelas
+﻿@model RVOE.modelos.ValidadorModelos.Escuelas
 @{
     ViewData["Title"] = "Agregar Escuela";
 }
@@ -18,10 +18,18 @@
             <span asp-validation-for="CCT" class="text-danger"></span>
         </div>
 
-        <div class="mb-3">
+        @* <div class="mb-3">
             <label>Tipo de Escuela</label>
             <input asp-for="TipoEscuela" class="form-control" />
+        </div> *@
+        <div class="mb-3">
+            <label>Tipo de Escuela</label>
+            <select asp-for="TipoEscuelaId" class="form-control" asp-items="@(new SelectList(ViewBag.TiposEscuela, "TipoEscuelaId", "NombreTipo"))">
+                <option value="">-- Selecciona --</option>
+            </select>
+            <span asp-validation-for="TipoEscuelaId" class="text-danger"></span>
         </div>
+
 
         <div class="mb-3">
             <label>Municipio</label>

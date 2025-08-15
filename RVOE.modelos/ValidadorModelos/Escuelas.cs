@@ -4,11 +4,12 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace RVOE.ValidadorModelos.modelos;
+namespace RVOE.modelos.ValidadorModelos;
 
 public partial class Escuelas
 {
     [Key]
+    [Required]
     public Guid EscuelaId { get; set; }
 
     [StringLength(100)]
@@ -59,6 +60,9 @@ public partial class Escuelas
 
     [StringLength(50)]
     public Guid TipoEscuelaId { get; set; }
+
+    [ForeignKey("TipoEscuelaId")]
+    public virtual TiposEscuela? TipoEscuela { get; set; }
 
     [InverseProperty("Escuela")]
     public virtual ICollection<EnvioRecepcion> EnvioRecepcion { get; set; } = new List<EnvioRecepcion>();

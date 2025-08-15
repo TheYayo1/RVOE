@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace RVOE.ValidadorModelos.modelos;
+namespace RVOE.modelos.ValidadorModelos;
 
 public partial class EstatusEscuela
 {

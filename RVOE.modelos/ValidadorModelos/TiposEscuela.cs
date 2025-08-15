@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
-namespace RVOE.entidades.ValidadorEntidades;
+namespace RVOE.modelos.ValidadorModelos;
 
 public partial class TiposEscuela
 {
@@ -19,3 +20,4 @@ public partial class TiposEscuela
     [InverseProperty("TipoEscuela")]
     public virtual ICollection<Escuelas> Escuelas { get; set; } = new List<Escuelas>();
 }
+

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RVOE.contextos;
-using RVOE.ValidadorModelos.modelos;
+using RVOE.modelos.ValidadorModelos;
 
 namespace RVOE.web.Controllers
 {
@@ -30,6 +30,7 @@ namespace RVOE.web.Controllers
         // GET Crear
         public IActionResult Agregar()
         {
+            ViewBag.TiposEscuela = _context.TiposEscuela.ToList();
             return View();
         }
 

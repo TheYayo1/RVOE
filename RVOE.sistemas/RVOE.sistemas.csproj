@@ -7,11 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RVOE.modelos\RVOE.modelos.csproj" />
+    <PackageReference Include="LinqKit" Version="1.3.8" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ValidadorSistemas\" />
+    <ProjectReference Include="..\RVOE.contextos\RVOE.contextos.csproj" />
+    <ProjectReference Include="..\RVOE.modelos\RVOE.modelos.csproj" />
   </ItemGroup>
 
 </Project>

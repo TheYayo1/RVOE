@@ -22,8 +22,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RVOE.entidades\RVOE.entidades.csproj" />
-    <ProjectReference Include="..\RVOE.modelos\RVOE.modelos.csproj" />
-    <ProjectReference Include="..\RVOE.sistemas\RVOE.sistemas.csproj" />
   </ItemGroup>
 
 </Project>
