@@ -39,3 +39,183 @@ body {
 .btn-login:hover {
     background-color: #917832;
 }
+
+Diseño de pantalla principal
+
+body {
+    padding-top: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.sidebar {
+    width: 280px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: linear-gradient(180deg, #8B5A8C 0%, #611332 100%);
+    color: white;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+    .sidebar h5 {
+        background: rgba(255, 255, 255, 0.1);
+        margin: 0;
+        padding: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    padding: 1rem 1.5rem;
+    margin: 0.25rem 1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+    .nav-link:hover {
+        background: rgba(255, 255, 255, 0.15);
+        color: white !important;
+        transform: translateX(5px);
+    }
+
+    .nav-link.active {
+        background: linear-gradient(135deg, #FF6B6B, #4ECDC4);
+        color: white !important;
+        box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        transform: translateX(5px);
+    }
+
+    .nav-link i {
+        margin-right: 0.75rem;
+        font-size: 1.1rem;
+        width: 20px;
+        text-align: center;
+    }
+
+.content {
+    margin-left: 280px;
+    padding: 2rem;
+    min-height: 100vh;
+    background: #f8f9fa;
+}
+
+.section-content {
+    display: none;
+    animation: fadeIn 0.3s ease-in;
+}
+
+    .section-content.active {
+        display: block;
+    }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 1.5rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+}
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+
+.btn-success {
+    background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+}
+
+    .btn-success:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+    }
+
+.btn-info {
+    background: linear-gradient(135deg, #36D1DC 0%, #5B86E5 100%);
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.table {
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+    .table thead th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        padding: 1rem;
+        font-weight: 600;
+    }
+
+    .table tbody td {
+        padding: 1rem;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+
+.search-form {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
