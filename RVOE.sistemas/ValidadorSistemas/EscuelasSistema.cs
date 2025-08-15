@@ -71,8 +71,9 @@ namespace RVOE.sistemas.ValidadorSistemas
                 {
                     TipoEscuelaId = e.TipoEscuela.TipoEscuelaId,
                     NombreTipo = e.TipoEscuela.NombreTipo,
-                    Descripcion = e.TipoEscuela.Descripcion
+                    Descripcion = e.TipoEscuela.Descripcion,
                 }
+
             };
 
         // Agregar
