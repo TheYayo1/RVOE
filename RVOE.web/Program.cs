@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<PladseLocalContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("PladseLocal")));
+builder.Services.AddDbContext<ValidadorUniversidadesContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ValidadorUniversidades")));
 
 builder.Services.AddSession();
 

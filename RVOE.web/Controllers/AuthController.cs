@@ -30,7 +30,7 @@ namespace RVOE.web.Controllers
             {
                 HttpContext.Session.SetString("UsuarioId", usuario.UsuarioId.ToString());
                 HttpContext.Session.SetString("Nombre", usuario.Nombre);
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Escuelas");
             }
 
             ViewBag.Error = "Usuario o contraseña incorrectos.";
